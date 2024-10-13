@@ -21,7 +21,7 @@
                                 <h4>Total Pengguna</h4> 
                             </div> 
                             <div class="card-body"> 
-                                200 
+                                {{ $users}}
                             </div> 
                         </div> 
                     </div> 
@@ -36,7 +36,7 @@
                                 <h4>Total Produk</h4> 
                             </div> 
                             <div class="card-body"> 
-                                200 
+                            {{ $products}}
                             </div> 
                         </div> 
                     </div> 

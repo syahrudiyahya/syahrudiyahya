@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Validator;
+use App\Models\User;
+
 
 class AuthController extends Controller
 {
@@ -59,7 +62,7 @@ class AuthController extends Controller
     return view('register');
     }
 
-    public function postRegister(Request $request)
+    public function post_register(Request $request)
     {
     // Validasi input
         $validator = Validator::make($request->all(), [
@@ -81,7 +84,6 @@ class AuthController extends Controller
             'password' => bcrypt($request->password),
             'point' => 10000,
         ]);
-
     // Cek apakah pembuatan user berhasil
         if ($user) {
         // Jika berhasil, tampilkan pesan sukses dan arahkan ke halaman login
@@ -94,4 +96,5 @@ class AuthController extends Controller
         }
     }
 }
+
     

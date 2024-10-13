@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Admin2;
+use App\Models\Admin;
 use App\Models\User;
 use App\Models\Distributor;
 
@@ -11,7 +11,7 @@ class ListController extends Controller
 {
     public function index()
     {
-        $admins = Admin2::all();
+        $admins = Admin::all();
         $users = User::all();
         $distributors = Distributor::all();
 
